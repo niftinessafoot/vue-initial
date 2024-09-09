@@ -1,0 +1,42 @@
+.app-report {
+  --gap: 2rem;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  align-content: start;
+  font-size: 2em;
+}
+
+.report-headline {
+  grid-column: span 3;
+  margin-bottom: 1rem;
+}
+
+.report-header {
+  border-bottom: 1px solid currentColor;
+  color: #999;
+  display: grid;
+  font-size: 1rem;
+  font-weight: bold;
+  gap: var(--gap);
+  grid-column: 1/-1;
+  grid-template-columns: subgrid;
+}
+
+.report-allocation {
+  display: grid;
+  gap: var(--gap);
+  grid-column: 1/-1;
+  grid-template-columns: subgrid;
+}
+
+@media screen and (max-width: 800px) {
+  .app-report {
+    width: 100%;
+  }
+
+  .report-headline {
+    display: none;
+  }
+}

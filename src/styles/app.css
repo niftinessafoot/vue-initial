@@ -1,0 +1,47 @@
+.app {
+  display: grid;
+  gap: 2em 5em;
+  grid-template:
+    'investment report'
+    'allocations report' / auto 1fr;
+  margin: 1em 2em;
+  width: fit-content;
+}
+
+.app-set-investment {
+  grid-area: investment;
+  display: grid;
+}
+
+.app-set-allocations {
+  grid-area: allocations;
+  display: grid;
+}
+
+.app-report {
+  grid-area: report;
+}
+
+@media screen and (max-width: 800px) {
+  .app {
+    gap: 2em;
+    grid-template:
+      'investment'
+      'report'
+      'allocations';
+    justify-items: center;
+    width: auto;
+  }
+
+  .app-set-investment,
+  .app-set-allocations {
+    border-style: none;
+    gap: 1.5em;
+    padding: 0;
+    width: 100%;
+
+    legend {
+      display: none;
+    }
+  }
+}

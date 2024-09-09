@@ -1,0 +1,52 @@
+:root {
+  --bg: #222629;
+  --color: #dfdfdf;
+  --focus-color: #495967;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--color);
+  font: 1em/1.6 arial, sans-serif;
+}
+
+fieldset {
+  position: relative;
+}
+
+legend {
+  background-color: var(--bg);
+  font-weight: bold;
+  margin: 0 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  translate: 0 -0.75em;
+  padding: 0 0.25em;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  border: 2px solid var(--bg);
+}
+
+label {
+  cursor: pointer;
+
+  aside {
+    font-style: italic;
+    font-size: 0.8em;
+  }
+}

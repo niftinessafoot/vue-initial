@@ -1,0 +1,24 @@
+label {
+  display: grid;
+  gap: 0.25em;
+  padding: 1em;
+
+  &:focus-within {
+    background-color: var(--focus-color);
+  }
+}
+
+span {
+  font-weight: bold;
+}
+
+input {
+  padding: 0.25em;
+}
+
+@media screen and (max-width: 800px) {
+  label {
+    font-size: 1.25em;
+    padding: 0;
+  }
+}
