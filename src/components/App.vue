@@ -79,6 +79,6 @@ watchEffect(async () => {
 </template>
 
 <style>
-@import url(@styles/global.css);
-@import url(@styles/app.css);
+@import '@styles/global.css';
+@import '@styles/app.css';
 </style>
