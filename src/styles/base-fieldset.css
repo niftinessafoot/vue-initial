@@ -1,0 +1,27 @@
+fieldset {
+  position: relative;
+}
+
+legend {
+  background-color: var(--bg);
+  font-weight: bold;
+  margin: 0 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  translate: 0 -0.75em;
+  padding: 0 0.25em;
+}
+
+@media screen and (max-width: 800px) {
+  fieldset {
+    border-style: none;
+    gap: 1.5em;
+    padding: 0;
+    width: 100%;
+  }
+
+  legend {
+    display: none;
+  }
+}

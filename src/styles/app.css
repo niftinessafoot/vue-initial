@@ -32,16 +32,4 @@
     justify-items: center;
     width: auto;
   }
-
-  .app-set-investment,
-  .app-set-allocations {
-    border-style: none;
-    gap: 1.5em;
-    padding: 0;
-    width: 100%;
-
-    legend {
-      display: none;
-    }
-  }
 }

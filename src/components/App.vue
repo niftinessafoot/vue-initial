@@ -3,6 +3,7 @@ import { ref, computed, watchEffect } from 'vue';
 import CONFIG from '@/config.json';
 import { default as BaseInputNumber } from '@components/BaseInputNumber.vue';
 import { default as BaseSelect } from '@components/BaseSelect.vue';
+import { default as BaseFieldset } from '@components/BaseFieldset.vue';
 import { default as AppReport } from '@components/AppReport.vue';
 import { useFetch } from '@composables/useFetch';
 import { formatPercentage } from '@scripts/format';
@@ -45,8 +46,7 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <fieldset className="app-set-investment">
-    <legend>Investable Assets</legend>
+  <BaseFieldset legend="Investable Assets" className="app-set-investment">
     <BaseInputNumber
       v-model="textInput"
       id="txtInvestment"
@@ -54,11 +54,9 @@ watchEffect(async () => {
       className="app-investment"
       context="Currency in USD"
       min="0"
-    />
-  </fieldset>
+  /></BaseFieldset>
 
-  <fieldset class="app-set-allocations">
-    <legend>Allocations</legend>
+  <BaseFieldset legend="Allocations" class="app-set-allocations">
     <template
       v-for="({ allocation, currency }, index) in allocations"
       :key="`sel-${index}`"
@@ -74,7 +72,7 @@ watchEffect(async () => {
         :className="`allocation-${currency.toLowerCase()}`"
       />
     </template>
-  </fieldset>
+  </BaseFieldset>
   <AppReport :budget="textInput" :data="reportData" className="app-report" />
 </template>
 
